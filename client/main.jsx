@@ -3,9 +3,9 @@ import { Meteor } from "meteor/meteor";
 import { render } from "react-dom";
 
  
- import WeekForecast from "../imports/ui/WeekForecast";
+ import MonthForecast from "/imports/ui/MonthForecast";
 
  
 Meteor.startup(() => {
-  render(<WeekForecast/>, document.getElementById("render-target"));
+  render(<MonthForecast/>, document.getElementById("render-target"));
 });

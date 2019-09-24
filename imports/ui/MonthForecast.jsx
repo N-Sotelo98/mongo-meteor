@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import DayForecast from "./DayForecast.jsx";
 import { withTracker } from 'meteor/react-meteor-data';
 import {Forecast} from '../api/forecast'
- class WeekForecast extends Component {
+ class MonthForecast extends Component {
 
  
 
@@ -18,7 +18,7 @@ import {Forecast} from '../api/forecast'
       <div>
         <div className="row text-center">
           <div className="col-sm">
-            7 Day Forecast        
+            31 Day Forecast        
           </div>
         </div>
         <div className="row">
@@ -28,4 +28,4 @@ import {Forecast} from '../api/forecast'
     );
   }
 }
-export default  withTracker(()=>{return {forecast:Forecast.find({}).fetch()} })(WeekForecast);
+export default  withTracker(()=>{return {forecast:Forecast.find({}).fetch()} })(MonthForecast);
